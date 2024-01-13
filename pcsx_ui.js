@@ -83,8 +83,6 @@ var Module = {
   setStatus: function (text) {
     if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: '' };
     if (text === Module.setStatus.text) return;
-    var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
-    var now = Date.now();
     document.getElementById('status').innerHTML = text;
     cout_print("setStatus: "+text);
   },
